@@ -96,7 +96,7 @@ class ProfileController extends Controller
 
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'image' => ['required', 'file', 'max:1000']
+            'image' => ['file', 'max:1000']
         ]);
 
         if ($request['image'] == false) {
